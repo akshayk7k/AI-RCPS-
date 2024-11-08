@@ -3,15 +3,9 @@ import itertools
 import random
 import glob
 import time
-<<<<<<< HEAD
 import networkx as nx
 import matplotlib.pyplot as plt
 from graphviz import Digraph
-=======
-
-import matplotlib.pyplot as plt
-
->>>>>>> 70374c64cd30625f38d509fca6eda90d9ddd3764
 class Activity:
     def __init__(self, identifier, resources, time, successors=None):
         self.identifier = identifier
@@ -178,15 +172,11 @@ def is_precedence_feasible(scheduled, time, activity, predecessors):
     return True
 
 def print_activity_sequence(sequence):
-<<<<<<< HEAD
     print(f"Sequence is {sequence}")
     print("DONE")
     draw__dag(sequence)
     identifier_sequence = [activity.identifier for activity in sequence]
     print(identifier_sequence)
-=======
-    identifier_sequence = [activity.identifier for activity in sequence]
->>>>>>> 70374c64cd30625f38d509fca6eda90d9ddd3764
     print("Activity Sequence:", ' -> '.join(identifier_sequence))
 
 def print_schedule_formatted(schedule):
@@ -654,7 +644,6 @@ def makespan_robustness_fitness():
         result.append((best_individual[1], best_individual[3], best_individual[4]))
         print(result, end=", ")
         print(compute_times)
-<<<<<<< HEAD
 def create_activity_graph(instances):
     """
     Generates a directed graph from activity instances with dependencies.
@@ -727,12 +716,6 @@ def draw__dag(activities):
 
 # Example usage
 def main():
-=======
-
-
-# Example usage
-if __name__ == "__main__":
->>>>>>> 70374c64cd30625f38d509fca6eda90d9ddd3764
 
     # Test pool performance
     # test_pool_x2()
@@ -754,7 +737,6 @@ if __name__ == "__main__":
     #     compute_times.append(end_time - start_time)
     #
     # print(compute_times)
-<<<<<<< HEAD
     
     # Test whole directory
     # result = []
@@ -808,20 +790,6 @@ if __name__ == "__main__":
         # print(f"alternative chains are : {alternative_chains}")
         instances = generate_full_enumeration(activities, alternative_chains)
         # print(f"instances are : {instances}")
-=======
-
-    # Test whole directory
-    result = []
-    file_pattern = "project_instances/J15x2/*.csv"
-    compute_times = []
-
-
-    for file_path in glob.glob(file_pattern):
-        compute_times = []
-        total_resource, activities, alternative_chains = create_activities_from_csv(file_path)
-
-        instances = generate_full_enumeration(activities, alternative_chains)
->>>>>>> 70374c64cd30625f38d509fca6eda90d9ddd3764
         sequence_pool = []
 
         # Test for all instances
@@ -831,7 +799,6 @@ if __name__ == "__main__":
         end_time = time.time()
         compute_times.append(end_time - start_time)
         print(compute_times)
-<<<<<<< HEAD
         sequence_pool = sorted(sequence_pool, key=lambda x: x[4])
         best_individual = sequence_pool[0]
         # print(f"best individual is : {best_individual}")
@@ -846,19 +813,6 @@ if __name__ == "__main__":
     print(compute_times)
     G=create_activity_graph(instances)
     draw_activity_graph(G)
-=======
-        # sequence_pool = sorted(sequence_pool, key=lambda x: x[4])
-        # best_individual = sequence_pool[0]
-        # print_individual(best_individual, total_resource)
-    #
-    #     result.append((best_individual[1], best_individual[3], best_individual[4]))
-    #
-    # for item in result:
-    #     print(item)
-
-    # show compute time
-    # print(compute_times)
->>>>>>> 70374c64cd30625f38d509fca6eda90d9ddd3764
 
     # Test for only one instance
     # file_path = r"project_instances/J30x3/J30x3_3.csv"
@@ -932,8 +886,5 @@ if __name__ == "__main__":
 
     # genetic_algorithm(instance_1, 6)
     # genetic_algorithm(instance_2, 6)
-<<<<<<< HEAD
 if __name__ == "__main__":
     main()
-=======
->>>>>>> 70374c64cd30625f38d509fca6eda90d9ddd3764
