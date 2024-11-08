@@ -1,18 +1,18 @@
 digraph {
-	Start
-	"a (3)"
-	"f (4)"
-	"d (2)"
-	"e (1)"
-	"b (4)"
-	"c (2)"
-	End
-	Start -> "a (3)"
-	Start -> "f (4)"
-	"a (3)" -> "d (2)"
-	"f (4)" -> "d (2)"
-	"d (2)" -> "e (1)"
-	"e (1)" -> "b (4)"
-	"b (4)" -> "c (2)"
-	"c (2)" -> End
+	Start [label=Start]
+	a [label="a (3)"]
+	f [label="f (4)"]
+	d [label="d (2)"]
+	e [label="e (1)"]
+	b [label="b (4)"]
+	c [label="c (2)"]
+	End [label=End]
+	Start -> a
+	Start -> f
+	a -> d
+	f -> d
+	d -> e
+	e -> b
+	b -> c
+	c -> End
 }
