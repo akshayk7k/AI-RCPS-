@@ -41,6 +41,7 @@ This code provides a basic framework for solving the RCPSP using a genetic algor
 
 ![image](https://github.com/dasslerrr/RCPSP-with-Genetic-Algorithm/assets/75805648/e9f4c72e-4bcb-4fd6-8a43-59dbf13bbc88)
 ![image](https://github.com/dasslerrr/RCPSP-with-Genetic-Algorithm/assets/75805648/24bfe5f2-8af0-4475-a912-f6e75a7d1f95)
+
 This image appears to be a directed acyclic graph (DAG) that represents the precedence relationships between different tasks or activities in your project. The nodes represent the tasks, and the directed edges between them indicate the dependencies. For example, task 1 must be completed before task 3 can start. This type of visualization helps understand the task dependencies and the flow of the project.
 
 ![image](https://github.com/akshayk7k/AI-RCPS-/blob/main/activity_graph.png)
