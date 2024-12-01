@@ -1,41 +1,32 @@
 digraph {
 	rankdir=TB
-	"1x" [label="1x (Time: 3, Res: 5)"]
-	2 [label="2 (Time: 4, Res: 3)"]
-	3 [label="3 (Time: 3, Res: 1)"]
-	5 [label="5 (Time: 3, Res: 3)"]
-	7 [label="7 (Time: 2, Res: 2)"]
-	6 [label="6 (Time: 5, Res: 5)"]
-	13 [label="13 (Time: 4, Res: 3)"]
-	9 [label="9 (Time: 3, Res: 3)"]
-	8 [label="8 (Time: 4, Res: 1)"]
-	11 [label="11 (Time: 7, Res: 4)"]
-	4 [label="4 (Time: 6, Res: 2)"]
-	"12x" [label="12x (Time: 4, Res: 3)"]
-	10 [label="10 (Time: 4, Res: 3)"]
-	14 [label="14 (Time: 2, Res: 2)"]
-	15 [label="15 (Time: 6, Res: 3)"]
-	"1x" -> 2
+	1 [label="1 (Time: 3, Res: 4)"]
+	2 [label="2 (Time: 5, Res: 6)"]
+	5 [label="5 (Time: 7, Res: 2)"]
+	3 [label="3 (Time: 2, Res: 2)"]
+	6 [label="6 (Time: 3, Res: 4)"]
+	"4x" [label="4x (Time: 4, Res: 2)"]
+	9 [label="9 (Time: 7, Res: 2)"]
+	8 [label="8 (Time: 3, Res: 2)"]
+	7 [label="7 (Time: 5, Res: 2)"]
+	10 [label="10 (Time: 2, Res: 2)"]
+	11 [label="11 (Time: 2, Res: 3)"]
+	1 -> 2
 	2 -> 3
-	3 -> 4
-	4 -> "12x"
-	"12x" -> 14
-	14 -> 15
-	4 -> 12
-	12 -> 14
-	3 -> 7
-	7 -> 8
-	8 -> 11
-	11 -> "12x"
-	11 -> 12
-	7 -> 10
-	10 -> 14
+	3 -> 6
+	6 -> 9
+	9 -> 11
+	6 -> "9x"
+	"9x" -> 11
+	2 -> 4
+	4 -> 8
+	8 -> 10
+	10 -> 11
+	4 -> 7
+	7 -> 11
 	2 -> 5
-	5 -> 9
-	9 -> 10
-	5 -> 6
-	6 -> 13
-	13 -> 14
-	"1x" -> 3
-	"1x" -> 4
+	5 -> 8
+	2 -> "4x"
+	"4x" -> 8
+	"4x" -> 7
 }

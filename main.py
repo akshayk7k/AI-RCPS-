@@ -684,8 +684,8 @@ def draw_activity_graph(G):
     # Draw edges with arrows
     nx.draw_networkx_edges(G, pos, arrowstyle='->', arrowsize=20, edge_color='gray')
 
-    plt.title("Activity Dependency Graph")
-    plt.show()
+    # plt.title("Activity Dependency Graph")
+    # plt.show()
 
 def draw__dag(activities):
     dot = Digraph(format='png')
